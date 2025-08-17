@@ -72,7 +72,7 @@
           {
             "position": {
               "x": 957,
-              "y": 50
+              "y": 45
             },
             "size": {
               "width": 320,
@@ -466,11 +466,13 @@
                 "text": "Database"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -567,13 +569,33 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "35c77b2f-6329-4ce6-9056-23be2777ccb9",
+                  "title": "Sensitive Data Exposure at Rest",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "If the database or backups are unencrypted, compromise could reveal credentials, MOTD, or comments.",
+                  "mitigation": "Encrypt data at rest, restrict access",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -779,6 +801,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "test",
-    "threatTop": 0
+    "threatTop": 1
   }
 }
